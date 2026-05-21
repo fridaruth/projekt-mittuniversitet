@@ -4,7 +4,7 @@ import { Course } from '../models/course.model';
 @Injectable({
   providedIn: 'root',
 })
-export class Schedule {
+export class ScheduleService {
   // privat signal, håller koll på valda kurser
   private selectedCoursesSignal = signal<Course[]>([]);
   // publik signal
