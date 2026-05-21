@@ -5,7 +5,7 @@
         <p>Välj kurser till ditt ramschema.</p>
 
         <div class="cards-grid">
-            @for (course of courses(); track course.courseCode) {
+            @for (course of courses(); track $index) {
             <div class="colorcoded-card" (click)="addCoursesToSchedule(course)">
                 <div class="card-header" [attr.class]="'card-header ' + course.subjectCode">
                     <span class="subject-tag">{{ course.subjectCode }}</span>
