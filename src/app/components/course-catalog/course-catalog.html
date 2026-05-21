@@ -1,1 +1,60 @@
-<p>course-catalog works!</p>
+<div class="split-screen-container">
+
+    <main class="catalog-section">
+        <h2>Kurskatalog</h2>
+        <p>Välj kurser till ditt ramschema.</p>
+
+        <div class="cards-grid">
+            @for (course of courses(); track course.courseCode) {
+            <div class="colorcoded-card" (click)="addCoursesToSchedule(course)">
+                <div class="card-header" [attr.class]="'card-header ' + course.subjectCode">
+                    <span class="subject-tag">{{ course.subjectCode }}</span>
+                </div>
+
+                <div class="card-body">
+                    <span class="course-code">{{ course.courseCode }}</span>
+                    <h3>{{ course.courseName }}</h3>
+                    <p class="progression">Nivå: {{ course.level }} ({{ course.progression }}</p>
+                </div>
+
+                <div class="card-footer">
+                    <span class="points-badge">{{ course.points }} HP</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            }
+        </div>
+    </main>
+
+    <aside class="schedule-section">
+        <div class="sticky-summary">
+            <h2>Ramschema</h2>
+            <p>Dina valda kurser visas här.</p>
+
+            <div class="counter-box">
+                <span class="counter-label">Totala poäng:</span>
+                <span class="counter-value" [class.complete]="totalPoints() >= 180">
+                    {{ totalPoints() }} / 180 HP
+                </span>
+            </div>
+
+            @if (selectedCourses().length === 0) {
+            <p class="empty-msg">Ditt ramschema är tomt. Lägg till kurser till vänster för att börja bygga!</p>
+            } @else {
+            <ul class="schedule-list">
+                @for (course of selectedCourses(); track course.courseCode) {
+                <li class="schedule-item">
+                    <div class="mini-color-bar" [attr.class]="'mini-color-bar ' + course.subjectCode"></div>
+                    <div class="item-info">
+                        <strong>{{ course.courseCode }}</strong> - {{ course.courseName }}
+                        <span class="item-points">{{ course.points }} HP</span>
+                    </div>
+                    <button class="remove-btn"
+                        (click)="removeCoursesFromSchedule(course.courseCode); $event.stopPropagation()">x</button>
+                </li>
+                }
+            </ul>
+            }
+        </div>
+    </aside>
+</div>
