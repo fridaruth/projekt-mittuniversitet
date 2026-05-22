@@ -4,9 +4,22 @@
         <h2>Kurskatalog</h2>
         <p>Välj kurser till ditt ramschema.</p>
 
+        <div class="filter-bar">
+            <input type="text" placeholder="Sök kurser..." (input)="onSearchChange($event)" />
+
+            <select (change)="onSubjectChange($event)">
+                <option value="">Alla ämnen</option>
+                @for (subject of uniqueSubjects(); track $index) {
+                <option [value]="subject">{{ subject }}</option>
+                }
+            </select>
+        </div>
+
+        <p class="results-count">Visar {{ filteredCourses().length }} kurser</p>
+
         <div class="cards-grid">
-            @for (course of courses(); track $index) {
-            <div class="colorcoded-card" (click)="addCoursesToSchedule(course)">
+            @for (course of filteredCourses(); track $index) {
+            <div class="colorcoded-card">
                 <div class="card-header" [attr.class]="'card-header ' + course.subjectCode">
                     <span class="subject-tag">{{ course.subjectCode }}</span>
                 </div>
@@ -14,11 +27,14 @@
                 <div class="card-body">
                     <span class="course-code">{{ course.courseCode }}</span>
                     <h3>{{ course.courseName }}</h3>
-                    <p class="progression">Nivå: {{ course.level }} ({{ course.progression }}</p>
+                    <p class="progression">Nivå: {{ course.level }} ({{ course.progression }})</p>
+
                 </div>
 
                 <div class="card-footer">
                     <span class="points-badge">{{ course.points }} HP</span>
+                    <a [attr.href]="course.syllabus" target="_blank" class="syllabus-link">
+                        Kursplan</a>
                     <button class="add-btn">+</button>
                 </div>
             </div>

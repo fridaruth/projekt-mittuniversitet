@@ -1,4 +1,4 @@
-import { Injectable, signal, computed } from '@angular/core';
+import { Injectable, signal, computed, effect } from '@angular/core';
 import { Course } from '../models/course.model';
 
 @Injectable({
@@ -6,7 +6,10 @@ import { Course } from '../models/course.model';
 })
 export class ScheduleService {
   // privat signal, håller koll på valda kurser
-  private selectedCoursesSignal = signal<Course[]>([]);
+  private selectedCoursesSignal = signal<Course[]>(
+    JSON.parse(localStorage.getItem('my_ramschema') || '[]')
+  );
+
   // publik signal
   public selectedCourses = this.selectedCoursesSignal.asReadonly();
 
@@ -14,6 +17,13 @@ export class ScheduleService {
   public totalPoints = computed(() => {
     return this.selectedCoursesSignal().reduce((sum, course) => sum + course.points, 0);
   });
+
+  // constructor som soarar till localStorage
+  constructor() {
+    effect(() => {
+      localStorage.setItem('my_ramschema', JSON.stringify(this.selectedCoursesSignal()));
+    })
+  }
 
   // funktion för att lägga till kurs i ramschema
   addCourse(course: Course): void {
