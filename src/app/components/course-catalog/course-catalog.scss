@@ -1,4 +1,6 @@
-@import 'subject-colors';
+@use 'subject-colors' as colors;
+
+// halva sidan visar valda kurser och antal poäng, andra visar tillgängliga kurser
 
 .split-screen-container {
     display: grid;
@@ -68,7 +70,7 @@
     }
 }
 
-// färgade kort
+// färgade kort för kurser
 .colorcoded-card {
     background: #ffffff;
     border: 2px solid #1a1a1a;
@@ -93,7 +95,8 @@
         padding: 0 0.5rem;
         background-color: #7f8c8d;
 
-        @each $code, $color in $subject-palette {
+        // färg baserat på ämneskod
+        @each $code, $color in colors.$subject-palette {
             &.#{$code} {
                 background-color: $color;
             }
@@ -178,7 +181,7 @@
     }
 }
 
-// Högersidan
+// Högersidan, visar valda kurser
 .schedule-section {
     .sticky-summary {
         position: sticky;
@@ -233,7 +236,8 @@
             align-self: stretch;
             background-color: #7f8c8d;
 
-            @each $code, $color in $subject-palette {
+            // ha kvar färgen för ämnet
+            @each $code, $color in colors.$subject-palette {
                 &.#{$code} {
                     background-color: $color;
                 }

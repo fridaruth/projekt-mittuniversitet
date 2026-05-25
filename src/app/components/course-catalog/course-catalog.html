@@ -35,7 +35,7 @@
                     <span class="points-badge">{{ course.points }} HP</span>
                     <a [attr.href]="course.syllabus" target="_blank" class="syllabus-link">
                         Kursplan</a>
-                    <button class="add-btn">+</button>
+                    <button class="add-btn" (click)="addCoursesToSchedule(course)">+</button>
                 </div>
             </div>
             }
