@@ -1,88 +1,85 @@
 $subject-palette: (
-    // Data, IT, Matte, Teknik
-    "DTA": #0077c2, // datateknik
-    "DVA": #121d24, // datavetenskap
-    "IKA": #1a5f7a, // informatik
-    "MAT": #57c5b6, // matematik
-    "AKI": #3864a9, // arkivvetenskap
-    "AVA": #1b6a8e, // arkivkunskap
-    "AMN": #188e73, // ämnesdidaktik i matte och natur
-    "STA": #056d5f, // statistik
+    // Data, IT, Matte, Statistik
+    "DTA": #084594, // datateknik
+    "DVA": #2171b5, // datavetenskap
+    "IKA": #4292c6, // informatik
+    "MAT": #6baed6, // matematik
+    "STA": #9ecae1, // statistik
+    "AMN": #c6dbef, // ämnesdidaktik i matte och natur
+    "AKI": #2c3e50, // arkivvetenskap
+    "AVA": #34495e, // arkivkunskap    
 
     // vård, hälsa
-    "OMA": #2ecc71, // omvårdnad
-    "RHA": #1e8449, // rehabiliteringsvetenskap
-    "FHA": #145a32, // folkhälsovetenskap
-    "HSA": #067637, // hälso- sjukvårdsadmin
-    "IVA": #278b2d, // idrottsvetenskap
-    "MVO": #3e3890, // medicinsk vetenskap
-    "VÅE": #0d6e46, // vårdvetenskap
+    "OMA": #1abc9c, // omvårdnad
+    "VÅE": #16a085, // vårdvetenskap
+    "RHA": #0e8676, // rehabiliteringsvetenskap
+    "FHA": #076b5e, // folkhälsovetenskap
+    "HSA": #044f45, // hälso- sjukvårdsadmin
+    "IVA": #52b788, // idrottsvetenskap
+    "MVO": #1c6845, // medicinsk vetenskap
 
-    // natur, lab, miljö
-    "BIA": #1abc9c, // biologi
-    "MXA": #16a085, // miljövetenskap
-    "MÖA": #18594c, // miljöteknik
+    // natur, miljö
+    "BIA": #2ecc71, // biologi
+    "MXA": #27ae60, // miljövetenskap
+    "MÖA": #1e8449, // miljöteknik
     "KEM": #117a65, // kemi
-    "FYA": #0e6251, // fysik
-    "GGA": #1c3933, // geografi
-    "NVS": #044e3f, // naturvetenskap
-
+    "FYA": #16a085, // fysik
+    "GGA": #145a32, // geografi
+    "NVS": #0b5345, // naturvetenskap
 
     // industri, maskin
-    "KTA": #2c3e50, // kvalitetsteknik
-    "MTA": #34495e, // maskinteknik
-    "KEA": #212f3d, // kvalitetledning
-    "BTA": #182a3b, // byggnadsteknik
-    "ELA": #3d444b, // elektronik
-    "ETA": #002b5b, // elektroteknik
-    "ERA": #3e5d80, // energiteknik
-    "IUA": #05557a, // industridesign
-    "IGA": #123444, // idustriell organisation och ekonomi
-    "TDE": #0766d3, // teknisk design
-    "TFY": #03484a, // teknisk fysik
-
+    "KTA": #4b5563, // kvalitetsteknik
+    "KEA": #374151, // kvalitetledning
+    "MTA": #1f2937, // maskinteknik
+    "BTA": #172541, // byggnadsteknik
+    "ELA": #1a2e40, // elektronik
+    "ETA": #2c4a6f, // elektroteknik
+    "ERA": #415a77, // energiteknik
+    "TDE": #0f4c5c, // teknisk design
+    "IUA": #118ab2, // industridesign
+    "TFY": #005f73, // teknisk fysik
+    "IGA": #0a9396, // idustriell organisation och ekonomi
 
     // språk och litteratur
     "SVE": #9b59b6, // svenska språket
     "ENA": #8e44ad, // engelska
-    "LIA": #d352b2, // litteraturvetenskap
-    "SPA": #75168d, // spanska
-    "SSA": #48374f, // svenska som andraspråk
+    "LIA": #732d97, // litteraturvetenskap
+    "SPA": #5b1e7a, // spanska
+    "SSA": #4a1563, // svenska som andraspråk
 
     // Samhälle, lag & rätt
-    "SOA": #ed1c24, // sociologi
-    "SKA": #c0392b, // statvetenskap
-    "KRI": #a63121, // kriminologi
-    "MRA": #7c1d12, // mänskliga rättigheter
+    "SOA": #e63946, // sociologi
+    "SKA": #d62828, // statvetenskap
+    "KRI": #9b2226, // kriminologi
+    "MRA": #ae2012, // mänskliga rättigheter
 
     // människa & beteende
-    "PEA": #e67e22, // pedagogik
-    "PSA": #d35400, // psykologi
-    "GEU": #e74c3c, // genusvetenskap
-    "RHE": #b47b0a, // rehabiliteringsv.
-    "SAA": #0e315c, // socialt arbete
+    "PEA": #f4a261, // pedagogik
+    "PSA": #e76f51, // psykologi
+    "GEU": #e65f3a, // genusvetenskap
+    "RHE": #d94e26, // rehabiliteringsv.
+    "SAA": #933e2f, // socialt arbete
 
     // historia & kultur
-    "HIA": #b37d14, // historia
-    "RKA": #5c3a21, // religionsvetenskap
-    "KGA": #8a5a00, // kulturgeografi
-    "SHA": #c66300, // samhällskunskap
+    "HIA": #e9c46a, // historia
+    "RKA": #8c6239, // religionsvetenskap
+    "KGA": #dea613, // kulturgeografi
+    "SHA": #c67a00, // samhällskunskap
 
     // Ekonomi, juridik
-    "FÖA": #f1c40f, // företagsekonomi
-    "TRU": #9b59b6, // turismvetenskap
-    "JUA": #8e44ad, // juridik
-    "NAA": #482657, // nationalekonomi
+    "FÖA": #d4af37, // företagsekonomi
+    "NAA": #b79412, // nationalekonomi
+    "JUA": #6f4e37, // juridik
+    "TRU": #a3704c, // turismvetenskap
+    "MBH": #5c3a21, // möbel och byggnad
 
     // Design, journalistik
-    "GDA": #ee65db, // grafisk design
-    "GTA": #ed57e3, // grafisk teknik
-    "JOA": #a24496, // journalistik
-    "MKA": #aa578c, // medie- och kommunikationsvetenskap
-    "FTA": #e050ae, // foto
-    "BDA": #661449, // bild
-    "BJO": #7b3362, // bildjournalistik
-    "LPU": #59256d, // ljudproduktion
-
-    "MBH": #463220, // möbel och byggnad
+    "GDA": #ff007f, // grafisk design
+    "GTA": #e00070, // grafisk teknik
+    "JOA": #bc0060, // journalistik
+    "BJO": #98004f, // bildjournalistik
+    "MKA": #c77dff, // medie- och kommunikationsvetenskap
+    "FTA": #7b2cbf, // foto
+    "BDA": #5a189a, // bild
+    "LPU": #3c096c, // ljudproduktion
 )

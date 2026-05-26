@@ -13,7 +13,7 @@ import { Course } from '../../models/course.model';
 export class CourseCatalog {
   // injicera tjänster
   private coursesService = inject(CourseService);
-  private scheduleService = inject(ScheduleService);
+  public scheduleService = inject(ScheduleService);
 
   // public för HTML
   public courses = this.coursesService.courses;

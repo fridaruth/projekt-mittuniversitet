@@ -18,7 +18,7 @@ export class ScheduleService {
     return this.selectedCoursesSignal().reduce((sum, course) => sum + course.points, 0);
   });
 
-  // constructor som soarar till localStorage
+  // constructor som sparar till localStorage
   constructor() {
     effect(() => {
       localStorage.setItem('my_ramschema', JSON.stringify(this.selectedCoursesSignal()));
@@ -33,9 +33,7 @@ export class ScheduleService {
     if(!alreadyExists) {
       // skapa en ny array med kursen och uppdatera
       this.selectedCoursesSignal.set([...this.selectedCoursesSignal(), course]);
-    } else {
-      alert(`Kursen ${course.courseName} finns redan i ditt ramschema!`);
-    }
+    } 
   }
 
   // funktion för att ta bort kurs

@@ -14,7 +14,7 @@
     @media (max-width: 900px) {
         grid-template-columns: 1fr;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 }
 
@@ -148,8 +148,8 @@
             border: 1px solid #1a1a1a;
         }
 
-        
-        .syllabus-link{
+
+        .syllabus-link {
             display: inline-block;
             font-size: 0.8rem;
             color: #0077c2;
@@ -178,8 +178,16 @@
                 background: #059e4f;
             }
         }
+
+        .add-btn.already-added {
+            background: #466737 !important;
+            color: white;
+            cursor: not-allowed;
+            transform: none !important;
+        }
     }
 }
+
 
 // Högersidan, visar valda kurser
 .schedule-section {
