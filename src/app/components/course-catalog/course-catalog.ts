@@ -35,6 +35,10 @@ export class CourseCatalog {
     const search = this.searchQuery().toLowerCase();
     const subject = this.selectedSubject();
 
+    if (search === '' && subject === '') {
+      return [];
+    }
+
     return this.courses().filter(course => {
       // kolla om sökordet finns
       const matchesSearch = course.courseCode.toLowerCase().includes(search) ||

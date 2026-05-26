@@ -17,6 +17,12 @@
 
         <p class="results-count">Visar {{ filteredCourses().length }} kurser</p>
 
+        @if (filteredCourses().length === 0 && searchQuery() === '' && selectedSubject() === ''){
+            <div class="empty-message">
+                <p>Sök på en kurs, eller välj ett ämnesområde ovan för att visa tillgängliga kurser!</p>
+            </div>
+        }
+
         <div class="cards-grid">
             @for (course of filteredCourses(); track $index) {
             <div class="colorcoded-card">
@@ -55,7 +61,7 @@
             </div>
 
             @if (selectedCourses().length === 0) {
-            <p class="empty-msg">Ditt ramschema är tomt. Lägg till kurser till vänster för att börja bygga!</p>
+            <p class="empty-msg">Ditt ramschema är tomt. Lägg till kurser för att börja bygga!</p>
             } @else {
             <ul class="schedule-list">
                 @for (course of selectedCourses(); track course.courseCode) {
