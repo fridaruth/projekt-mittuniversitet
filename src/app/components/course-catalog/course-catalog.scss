@@ -1,7 +1,6 @@
 @use 'subject-colors' as colors;
 
 // halva sidan visar valda kurser och antal poäng, andra visar tillgängliga kurser
-
 .split-screen-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -151,7 +150,6 @@
 
         .syllabus-link {
             display: inline-block;
-            font-size: 0.8rem;
             color: #0077c2;
             text-decoration: none;
             font-weight: bold;
@@ -180,8 +178,7 @@
         }
 
         .add-btn.already-added {
-            background: #466737 !important;
-            color: white;
+            background: #059e4f;
             cursor: not-allowed;
             transform: none !important;
         }
@@ -198,7 +195,7 @@
         border: 2px solid #1a1a1a;
         padding: 1.5rem;
         border-radius: 4px;
-        box-shadow: 4px 4px 0px #1a1a1a;
+        box-shadow: 4px 4px 0px #1a1a1ade;
     }
 
     .counter-box {
@@ -234,13 +231,13 @@
         display: flex;
         align-items: center;
         background: white;
-        border: 1px solid #1a1a1a;
+        border: 2px solid #1a1a1a;
         margin-bottom: 0.5rem;
         border-radius: 4px;
         overflow: hidden;
 
         .mini-color-bar {
-            width: 8px;
+            width: 10px;
             align-self: stretch;
             background-color: #7f8c8d;
 

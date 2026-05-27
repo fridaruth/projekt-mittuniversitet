@@ -35,6 +35,7 @@ export class CourseCatalog {
     const search = this.searchQuery().toLowerCase();
     const subject = this.selectedSubject();
 
+    // visa inget om sök och ämne är tomt
     if (search === '' && subject === '') {
       return [];
     }
